@@ -22,35 +22,3 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d | sort`; do
   fi
 done
 echo "</UL>" >> $OUTPUT
-
-# walk_dir () {
-#   shopt -s nullglob dotglob
-
-#   for pathname in "$1"/*; do
-#     if [[ "$pathname" == *".git"* ]]; then
-#       echo "Skipping .git ..."
-#     elif [ -d "$pathname" ]; then
-#       echo "<h2>$pathname</h2>" >> index.html
-#       walk_dir "$pathname"
-#     else
-#       printf '%s\n' "$pathname"
-#       echo "<div><a href=\"$pathname\">$pathname</a></div>" >> index.html
-#     fi
-#   done
-# }
-
-# echo "<h1>Assets Index</h1>" > index.html
-
-# walk_dir "."
-
-# for entry in *
-# do
-#   if [[ -d $entry ]]; then
-#     echo "$entry is a directory"
-#   elif [[ -f $entry ]]; then
-#     echo "$entry is a file"
-#   else
-#     echo "$entry is not valid"
-#     exit 1
-#   fi
-# done
